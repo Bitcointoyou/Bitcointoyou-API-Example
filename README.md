@@ -14,20 +14,35 @@ Remember to run npm i on folder to install dependencies
 Use this code with your risk, only to educational use.
 
 With this code you can call public endpoints:
+
 await getPrice(pair)
+
 await getTicker(pair)
+
 await getTrades(pair, 5)
+
 await getOrderBook(pair, 6)
 
+
 With this code you can call private endpoints:
+
 let balance = await getBalance()
+
 await createLimitOrder(1, 0.000001, pair, 'BUY') 
+
 await createLimitOrder(9999999, 0.000001, pair, 'SELL')
+
 await createMarketOrder(0.000001, pair, 'SELL')
+
 let orderList = await getOrders(pair)
+
 let id = orderList.openedOrders[0].orderID
+
 let order = await getOrder(id)
-response = await cancelOrder(id)    
+
+response = await cancelOrder(id)   
+
 response = await cancelAllOrders(pair)
+
 
 Obs: pair = BTC_BRLC or LTC_USDT or B2U_BRLC or BTC_USDT
