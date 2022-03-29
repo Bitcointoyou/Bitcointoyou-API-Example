@@ -9,6 +9,12 @@ Copy API and secret at line 12 and 13 of file index.js:
 const apiKey = 'XXXXXXXXXXXXXXXXXXXXXX'
 const apiSecret = 'XXXXXXXXXXXXXXXXXXX'
 
+To create signature:
+
+function generateSignature(key, secret, nonce) {
+var message = nonce + key; var hash = CryptoJS.HmacSHA256(message, secret); var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);
+return hashInBase64; }
+
 Remember to run npm i on folder to install dependencies 
 
 Use this code with your risk, only to educational use.
